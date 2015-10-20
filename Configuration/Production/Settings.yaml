@@ -1,3 +1,4 @@
+
 TYPO3:
     resource:
       collections:
@@ -22,3 +23,15 @@ TYPO3:
             bucket: 'flow.publish'
             keyPrefix: 'sites/neosdemo/persistent/'
             baseUri: 'http://d3jn4705a8oq8f.cloudfront.net/'
+
+Flownative:
+  Aws:
+    S3:
+      profiles:
+        default:
+          ## Let credentisal be empty, and configure IAM roles for you instance instead
+          credentials:
+            key:
+            secret:
+          ## Modify to the region you are deploying to
+          region: 'eu-west-1'
