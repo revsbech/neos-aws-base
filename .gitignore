@@ -4,6 +4,7 @@
 /Build/Reports
 /Build/Resources
 /Configuration/
+!/Configuration/Production/Settings.yaml
 /Data/
 /Packages/
 /Web/

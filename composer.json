@@ -16,7 +16,8 @@
         "typo3/imagine": "~2.0",
         "typo3/twitter-bootstrap": "~2.0",
         "typo3/form": "~2.0",
-        "typo3/setup": "~2.0"
+        "typo3/setup": "~2.0",
+        "flownative/aws-s3": "1.0.0-beta2"
     },
     "require-dev": {
         "typo3/buildessentials": "3.0.*@rc",

@@ -1,0 +1,24 @@
+TYPO3:
+    resource:
+      collections:
+        persistent:
+          target: 'cloudFrontPersistentResourcesTarget'
+          storage: 's3PersistentResourcesStorage'
+
+      storages:
+        s3PersistentResourcesStorage:
+          storage: 'Flownative\Aws\S3\S3Storage'
+          storageOptions:
+            bucket: 'flow.storage'
+            keyPrefix: 'sites/neosdemo/'
+
+      targets:
+        ## Change to not use symlinks, since deployment on AWS with EB will not work
+        localWebDirectoryStaticResourcesTarget:
+          target: 'TYPO3\Flow\Resource\Target\FileSystemTarget'
+        cloudFrontPersistentResourcesTarget:
+          target: 'Flownative\Aws\S3\S3Target'
+          targetOptions:
+            bucket: 'flow.publish'
+            keyPrefix: 'sites/neosdemo/persistent/'
+            baseUri: 'http://d3jn4705a8oq8f.cloudfront.net/'
